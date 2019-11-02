@@ -165,87 +165,93 @@ function hippopotamus() {<br>
 
 If we go navigate to '{' and hit the following key '%', we'll jump to it's matching counter part.
 
-This is insanely useful for quickly jumping around functions.<br> 
+This is insanely useful for quickly jumping around functions.<br>
 This works on the following:<br>
-    *: ( and )<br>
-    *: [ and ]<br>
-    *: { and }<br>
+* ( and )<br>
+* [ and ]<br>
+* { and }<br>
 
 ## Search & Replace
-Searching and jumping around the page is one thing, but maybe you want to change all words of 'cat' to the word 'dog'. This is very easy with Vim.
+Searching and jumping around the page is one thing, but maybe you want to change all instances of 'cat' to the 'dog'. This can very easily be done in Vim.
 
 ### Find and Replace
-:s/<searchTerm>/<replaceTerm>
+:s/[searchTerm]/[replaceTerm]
 
 ### Find and Replace All
-_To replace all instances, you need to make the find and replace global. Here's how:
-:s/<searchTerm>/<replaceTerm>/g <- 'g' as in **GLOBAL**.
+_To replace all instances, you need to make the find and replace global.<br>
+Here's how:<br>
+:s/[searchTerm]/[replaceTerm]/g <- 'g' as in **GLOBAL**.
 
 _**Note:** This can get infinitely more complex, as we can utilize this with **regular expression** find and replaces, replace only on **certain lines, sections** and more._
 
 ### Copying & Pasting
 We know how to delete text. The last text we deleted is stored in the buffer ready to be pasted back into the document. So if we've run 'dd' and deleted an entire line, we can now hit p or P to paste it back into the document! This goes for single lines, multiple lines, and even entire documents.
 
-Want to select text? In command mode, hit 'V' and we're able to move the cursor usign the arror keys or the standard movement keys (h, k, j, l) to highlight text. This is pretty easy, but can be slow. If we want to copy entire lines at a time, we use 'V' (capital-v) instead of 'v' (lowercase-v) and we'll highlight entire lines at a time.
+Want to select text? In command mode, hit 'V' and we're able to move the cursor usign the arror keys or the standard movement keys (h, k, j, l) to highlight text.<br>
+
+This is pretty easy, but can be slow. If we want to copy entire lines at a time, we use 'V' (capital-v) instead of 'v' (lowercase-v) and we'll highlight entire lines at a time.
 Again, we can use the movement keys to highlight additional lines.
 
-Once we've highlighted what we want, hit 'y' and we will "yank" the text into the buffer to be pasted later. So a usual paste operation might look liek this:
-Hit 'v' to highlight some text.
-Then hit 'y' to yank it into the buffer.
+Once we've highlighted what we want, hit 'y' and we will "yank" the text into the buffer to be pasted later.<br>
+
+So a usual paste operation might look liek this:<br>
+Hit 'v' to highlight some text.<br>
+Then hit 'y' to yank it into the buffer.<br>
 Then move the cursor to where we want it, and use 'p' in **command mode**.
 
-Summary of Copy/Paste Commands:
-v - highlight one **character** at a time.
-V - highlight one **line** at a time.
-CTRL+v - highlight by columns.
-p - paste text **after** the current line.
-P - paste text **ON** the current line.
-y - yank text into the copy buffer.
+**Summary of Copy/Paste Commands:**<br>
+v - highlight one **character** at a time (lowercase 'v').<br>
+V - highlight one **line** at a time (uppercase 'v').<br>
+CTRL+v - highlight by columns.<br>
+p - paste text **after** the current line (lowercase 'p').<br>
+P - paste text **ON** the current line (uppercase 'p').<br>
+y - yank text into the copy buffer.<br>
 
-## Execute an External Command
+# Executing External Commands
 This creeps right out of the area of getting started with Vim to the intermediate parts of it. With Vim, the commands aren't just limited to the Vim syntax/language of operators and motions.
 
-You can execute external commands as you normally would from the command line inside of an editor. All you need to do is start teh command witht an _exclamation mark_ (!).
+You can execute external commands as you normally would from the command line inside of an editor. All you need to do is start the command with an _exclamation mark_ (!).
 
-Here's an example to _list all files_.
+Here's an example to **list all files**.
 :!ls -al
 
 As we continue to learn more about Vim, we'll see how insanely powerful this will be. We can do things like write to other files, grab code from other files, paste into other files, and more. In a sense, it's like your own little Sublime Sidebar on steriods.
 
 # Configuring Vim
 Vim can also do things like syntax highlighting. By default, this usually isn't enabled. to enable it on a file, simply enter the following command:
-:syntax on
+:syntax on<br>
 
-This is kind of annoying to have to reenter this on each file though. That's where **configuring Vim** comes in handy. All Vim installs come witha file in our **HOME DIRECTORY** called .vimrc. If it's not there, we can create one.
+This is kind of annoying to have to re-enter this on each file though. That's where **configuring Vim** comes in handy. All Vim installs come witha file in our **HOME DIRECTORY** called .vimrc. If it's not there, we can create one.
 
 From the command line we'll now enter into this file for edit using Vim and force enable 'syntax on' by simply entering "syntax on".
 
+_Note: I personally find 'syntax highlighing' very annoying when it's enabled while writing a markdown file. Therefore, I personally **WOULD** rather enter it on an individual file basis._
 
 # Useful Tips & Tricks
 By now we should be fairly comfortable with Vim on the command line. Here's some miscellaneous useful tips and tricks.
 
 ## Set Vim as the Default Command Line Editor
-Nano is usually the default CLE in most systems. On ubuntu or other Debian-based systems, we run this command to switch:
-sudo update-alternatives --config editor
+Nano is usually the default CLE in most systems. On Ubuntu or other Debian-based systems, we run this command to switch:<br>
+_sudo update-alternatives --config editor_
 
 ## Set Vim as your Default Editor for Git
 get config --global core.editor "vim"
 
-#Plugins
-Vim also has the abilities to allow third-party to write plugins into the editor.
-For example, NERD Tree will essentailyl simulate a sidebar for the editor.
+# Plugins
+Vim also has the abilities to allow third-party to write plugins into the editor.<br>
+For example, NERD Tree will essentially simulate a sidebar for the editor.
 https://github.com/scrooloose/nerdtree
 
 
 # Longer List of Commands That Need to be Memorized
-d - starts the delete operation.
-dw - delete a word.
-d0 - delete to the beginning of the line.
-d$ - delete to the end of the line.
-dgg - delete from cursor to the beginning of the file.
-dG - delete from cursor to the end of the file.
-u - undo last operation.
-CTRL+r - undo last undo.
-This is a test sentence.
-This is another test sentence.
-This is yet another test sentence.
+d - starts the delete operation.<br>
+dw - delete a word.<br>
+d0 - delete to the beginning of the line.<br>
+d$ - delete to the end of the line.<br>
+dgg - delete from cursor to the beginning of the file.<br>
+dG - delete from cursor to the end of the file.<br>
+u - undo last operation.<br>
+CTRL+r - undo last undo.<br>
+This is a test sentence.<br>
+This is another test sentence.<br>
+This is yet another test sentence.<br>
