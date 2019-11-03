@@ -117,7 +117,7 @@ p - paste text **after** the current line (lowercase 'p').<br>
 P - paste text **ON** the current line (uppercase 'p').<br>
 y - yank text into the copy buffer.<br>
 
-Deleted and 'yanked' text is automatically copied into the buffer and available for pasting on deletion.
+Deleted and 'yanked' text is automatically copied into the buffer and available for pasting immediatly.
 
 ***
 
