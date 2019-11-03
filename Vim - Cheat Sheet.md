@@ -178,16 +178,16 @@ Searching and jumping around the page is one thing, but maybe you want to change
 :s/[searchTerm]/[replaceTerm]
 
 ### Find and Replace All
-_To replace all instances, you need to make the find and replace global.<br>
+_To replace all instances, you need to make the find and replace global._<br>
 Here's how:<br>
 :s/[searchTerm]/[replaceTerm]/g <- 'g' as in **GLOBAL**.
 
 _**Note:** This can get infinitely more complex, as we can utilize this with **regular expression** find and replaces, replace only on **certain lines, sections** and more._
 
-### Copying & Pasting
+## Copying & Pasting
 We know how to delete text. The last text we deleted is stored in the buffer ready to be pasted back into the document. So if we've run 'dd' and deleted an entire line, we can now hit p or P to paste it back into the document! This goes for single lines, multiple lines, and even entire documents.
 
-Want to select text? In command mode, hit 'V' and we're able to move the cursor usign the arror keys or the standard movement keys (h, k, j, l) to highlight text.<br>
+Want to select text? In command mode, hit 'v' and we're able to move the cursor usign the arror keys or the standard movement keys (h, k, j, l) to highlight text.<br>
 
 This is pretty easy, but can be slow. If we want to copy entire lines at a time, we use 'V' (capital-v) instead of 'v' (lowercase-v) and we'll highlight entire lines at a time.
 Again, we can use the movement keys to highlight additional lines.
@@ -252,6 +252,3 @@ dgg - delete from cursor to the beginning of the file.<br>
 dG - delete from cursor to the end of the file.<br>
 u - undo last operation.<br>
 CTRL+r - undo last undo.<br>
-This is a test sentence.<br>
-This is another test sentence.<br>
-This is yet another test sentence.<br>
