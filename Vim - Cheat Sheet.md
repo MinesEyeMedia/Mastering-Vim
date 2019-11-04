@@ -274,7 +274,7 @@ git config --global core.editor "vim"
 
 # Plugins
 Vim also has the abilities to allow third-party to write plugins into the editor.<br>
-For example, NERD Tree will essentially simulate a sidebar for the editor.
+For example, NERD Tree will essentially simulate a sidebar for the editor.<br>
 <https://github.com/scrooloose/nerdtree>
 
 
