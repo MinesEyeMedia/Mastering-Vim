@@ -180,7 +180,7 @@ By this point, we can jump around the page and search things, but it's still slo
 For example, say we have:
 
 ```
-function hippopotamus() {<br>
+function hippopotamus() {
     // insert 1 millions lines of code here.
 }
 ```
