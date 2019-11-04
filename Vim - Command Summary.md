@@ -42,7 +42,7 @@ While in **command mode** move the cursor to the desired position and press '```
 ***
 
 ## C-C-C-Combo Commands!
-**```[OPERATION(ACTION)] [NUMBER] [MOTION]```**<br>
+**```[OPERATION(ACTION)][NUMBER][MOTION]```**<br>
 **Operators:**<br>
 ```d``` - delete<br>
 ```c``` - change<br>
@@ -76,7 +76,7 @@ _Note: As deleting an entire line is a very common task, there is also the '```d
 ***
 
 ## Undo & Redo
-In **command mode**, 'u' will undo a command up to 500 buffered commands.<br>
+In **command mode**, '```u```' will undo a command up to 500 buffered commands.<br>
 
 ```CTRL+r``` (lowercase) will "undo" the previous **undo**.
 
