@@ -1,4 +1,5 @@
 # Mastering Vim Usage
+##### Written by Jacob Mines | Mines Eye Media
 ## The Basics
 
 Vim is apparently a text editor unlike any other. It's been said many times over that if a person invests time into truly learning and mastering Vim, it will be well worth it.

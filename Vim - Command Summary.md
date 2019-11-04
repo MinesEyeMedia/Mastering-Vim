@@ -1,4 +1,5 @@
 # Vim - Command Summary Gist
+##### Written by Jacob Mines | Mines Eye Media
 ## Modes
 There are two modes in Vim. **Insert Mode** and **Command mode**.
 

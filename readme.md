@@ -1,4 +1,5 @@
 # Mastering Vim - Readme
+##### Written by Jacob Mines | Mines Eye Media
 ### **v1.0**
 
 This is just a simple little repo that currently holds two files:<br>
